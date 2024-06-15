@@ -355,6 +355,10 @@ footer {
         height: 200px;
     }
 
+    main .timeline .content .moment .title video {
+        opacity: 0.4;
+    }
+
     main .timeline .content .moment .images {
         width: 100%;
     }
