@@ -212,6 +212,14 @@
                 document.querySelector('.mobile-nav').classList.remove('open');
             }
         });
+
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.querySelector('.mobile-nav');
+            const hamburger = document.querySelector('.hamburger');
+            if (!mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+                mobileNav.classList.remove('open');
+            }
+        });
     </script>
 </body>
 </html>
