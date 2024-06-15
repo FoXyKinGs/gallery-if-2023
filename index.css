@@ -1,0 +1,361 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #FFF;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #121212;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of CSS Reset  */
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 16px 32px;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+header.transparent {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .logo {
+    height: 100%;
+}
+
+header .hamburger {
+    display: none;
+}
+
+header .link {
+    display: flex;
+    gap: 32px;
+}
+
+header .link a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 75px;
+}
+
+main nav {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    gap: 16px;
+    display: flex;
+    width: 0px;
+    transition: all 0.3s ease;
+}
+
+main nav.open {
+    width: 70%;
+    transition: all 0.3s ease;
+}
+
+main nav a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+main nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main .jumbotron {
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: hidden;
+}
+
+main .jumbotron video {
+    width: 100%;
+}
+
+main .jumbotron .content {
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    padding: 32px 32px 128px 32px;
+    gap: 12px;
+}
+
+main .jumbotron .content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    gap: 12px;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 75%;
+}
+
+main .description-website {
+    padding: 32px;
+    position: relative;
+}
+
+main .description-website h2 {
+    margin: 32px;
+}
+
+main .description-website p {
+    text-indent: 32px;
+    font-size: 16px;
+}
+
+main .description-website img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    mix-blend-mode: color;
+}
+
+main .timeline {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: hidden;
+}
+
+main .timeline .content {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+main .timeline .content .moment {
+    display: flex;
+    gap: 32px;
+    position: relative;
+}
+
+main .timeline .content .moment .title {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+main .timeline .content .moment .title video {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+}
+
+main .timeline .content .moment .title video.horizontal {
+    margin: 0;
+    rotate: 90deg;
+}
+
+main .timeline .content .moment .images {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: justify;
+}
+
+main .timeline .content .moment .images img {
+    width: 100%;
+}
+
+main .timeline .content .moment .images img.on-class {
+    width: 50%;
+}
+
+main .timeline .content .moment .images .galeri {
+    display: flex;
+    gap: 8px;
+}
+
+main .timeline .content .moment .images .galeri img {
+    width: 50%;
+}
+
+main .timeline .content .moment .images .inside {
+    display: flex;
+    gap: 8px;
+}
+
+main .timeline .content .moment .images .inside img {
+    width: 49%;
+}
+
+main .timeline .content .moment .images .horizontal {
+    display: flex;
+    gap: 8px;
+}
+
+main .timeline .content .moment .images .horizontal.extend img {
+    width: 50%;
+}
+
+main .timeline .content .moment .images .horizontal img {
+    width: 32.5%;
+}
+
+main .timeline .content .moment .images .vertical {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+main .last {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+}
+
+main .last h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 16px 32px;
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    header .link {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    header .hamburger img {
+        width: 32px;
+        height: 32px;
+    }
+
+    main .jumbotron {
+        height: fit-content;
+    }
+
+    main .jumbotron .content {
+        padding: 16px
+    }
+
+    main .jumbotron .content .text h1 {
+        font-size: 16px;
+    }
+
+    main .timeline .content .moment {
+        flex-direction: column;
+    }
+
+    main .timeline .content .moment.reverse {
+        flex-direction: column-reverse;
+    }
+
+    main .timeline .content .moment .title {
+        width: 100%;
+        height: 200px;
+    }
+
+    main .timeline .content .moment .images {
+        width: 100%;
+    }
+}
